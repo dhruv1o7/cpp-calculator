@@ -2,6 +2,7 @@
 #include <cmath>
 #include <sstream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -112,8 +113,9 @@ char getAgain() {
 
 int main() {
 
+    cout << setprecision(12);
 
-    char again;
+    char again= 'n';
     bool exitProgram = false;
 
       do {
