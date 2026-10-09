@@ -1,0 +1,15 @@
+# Compiled executables
+calculator.exe
+calculator
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
+*.ilk
+
+# Build directories
+build/
+bin/
