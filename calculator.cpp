@@ -211,9 +211,27 @@ while (true) {
             double base = getNumber("Enter base: ");
             double exponent = getNumber("Enter exponent: ");
 
-            cout << "Result: " << power(base, exponent) << endl;
+            if (base == 0 && exponent < 0) {
+            cout << "Error: Zero cannot have a negative exponent."
+             << endl;
+             }
+            else if (base < 0 && floor(exponent) != exponent) {
+            cout << "Error: A negative base requires an integer exponent "
+             << "for a real-number result." << endl;
+            }
+            else {
+            double result = power(base, exponent);
 
-            break;
+            if (!isfinite(result)) {
+            cout << "Error: The result is undefined or too large."
+                 << endl;
+            }
+            else {
+            cout << "Result: " << result << endl;
+             }
+            }
+
+         break;
         }
 
         // Square Root
